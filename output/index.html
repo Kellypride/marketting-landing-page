@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>marketplaces</title>
+  </head>
+  <body class="bg-white border-8 border-black rounded-lg h-screen w-screen">
+    <section class="h-screen w-screen px-10 py-5">
+      <div
+        class="hidden bg-gray-200 rounded-full h-24 md:flex flex-row justify-between items-center gap-5 px-9"
+      >
+        <div
+          class="flex flex-row items-center gap-8 font-san text-2xl subpixel-antialiased font-thin"
+        >
+          <div>
+            <img
+              src="../img/logo.png"
+              alt="logo"
+              class="h-12 object-fill object-center"
+            />
+          </div>
+          <div>Service</div>
+          <div class="hidden md:inline">Partners</div>
+          <div class="">Team</div>
+          <div>Blog</div>
+        </div>
+
+        <div class="hidden md:flex flex-row space-x-8 font-san text-xl">
+          <button class="bg-white border border-black rounded-full px-8 py-2">
+            Register
+          </button>
+          <button
+            class="bg-blue-600 items-center rounded-full px-5 py-2 flex flex-row gap-4 text-white"
+          >
+            <img
+              src="../img/user.png"
+              alt="user-profile"
+              class="h-5 object-fill object-center"
+            />
+            <a href="#login">Login</a>
+          </button>
+        </div>
+      </div>
+
+      <div class="md:hidden flex flex-col h-[60vh]">
+        <div
+          class="bg-gray-200 rounded-full h-24 flex md:flex-row-reverse justify-between items-center gap-5 px-9"
+        >
+          <div class="flex sm:flex-row-reverse">
+              <img
+                src="../img/logo.png"
+                alt="logo"
+                class="h-12 object-fill object-center"
+              />
+          </div>
+          <div id="hamburger" ">
+            <img
+              src="../img/logo1.png"
+              alt="menu"
+              class=" h-12"
+              class="hamburger"
+            />
+          </div>
+        </div>
+        <div
+          class="slidebar bg-black flex flex-row-reverse  font-san items-center justify-between text-white text-xl w-[60vw] mx-5 py-10 px-2"
+        >
+          <!-- <div class="space-x-10">Service</div> -->
+          <!-- <div>Partners</div>
+          <div>Team</div>
+          <div>Blog</div> -->
+          <button
+            class="md:hidden bg-white text-black border border-black rounded-full px-3 py-2 w-fit"
+          >
+            Register
+          </button>
+          <button
+            class=" bg-blue-500  rounded-full px-3 py-2 flex flex-row gap-2 w-fit text-white relative z-10"
+          >
+            <img
+              src="../img/user.png"
+              alt="user-profile"
+              class="h-7 object-fill object-center"
+            />
+            <a href="#login">Login</a>
+          </button>
+        </div>
+      </div>
+
+      <div class="menu">
+        <div class="content-left">
+          <div>content-top</div>
+          <div>content-bottom</div>
+        </div>
+
+        <div class="content-right">
+          <div class="content-right-top"></div>
+          <div class="content-right-bottom">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <!-- <script src="http://127.0.0.1:5500/script/index.js"></script> -->
+  <script>
+    const hamburger = document.getElementById("hamburger");
+
+    // show and hide hamburger menu
+    hamburger.addEventListener("click", showSlidebar);
+
+    function showSlidebar() {
+      const slidebar = document.querySelector(".slidebar");
+      const disp = slidebar.style.display;
+      if (disp === "none") {
+        slidebar.style.display = "flex";
+      } else {
+        slidebar.style.display = "none";
+      }
+    }
+  </script>
+</html>
