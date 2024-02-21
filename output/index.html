@@ -4,108 +4,199 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>marketplaces</title>
+    <title>Advert Marketplace</title>
   </head>
-  <body class="bg-white border-8 border-black rounded-lg h-screen w-screen">
-    <section class="h-screen w-screen px-10 py-5">
+
+  <body
+    class="bg-white w-screen px-2 py-5 border-8 border-gray-200 rounded-lg height-full">
+    <header
+      class="relative bg-gray-100 h-20 flex items-center rounded-full px-5">
       <div
-        class="hidden bg-gray-200 rounded-full h-24 md:flex flex-row justify-between items-center gap-5 px-9"
-      >
-        <div
-          class="flex flex-row items-center gap-8 font-san text-2xl subpixel-antialiased font-thin"
-        >
-          <div>
+        id="desktop"
+        class="hidden w-full md:flex flex-row justify-between items-center gap-11">
+        <div class="flex gap-14 items-center">
+          <div id="brand" class="flex">
             <img
               src="../img/logo.png"
               alt="logo"
-              class="h-12 object-fill object-center"
-            />
+              class="h-10 object-fill object-center" />
           </div>
-          <div>Service</div>
-          <div class="hidden md:inline">Partners</div>
-          <div class="">Team</div>
-          <div>Blog</div>
+          <nav
+            class="hidden-sm font-san text-lg subpixel-antialiased font-thin">
+            <ul class="flex gap-11">
+              <li>Services</li>
+              <li class="hidden md:inline-block">Partners</li>
+              <li>Team</li>
+              <li>Blog</li>
+            </ul>
+          </nav>
         </div>
-
-        <div class="hidden md:flex flex-row space-x-8 font-san text-xl">
-          <button class="bg-white border border-black rounded-full px-8 py-2">
+        <div class="flex justify-center gap-5">
+          <button class="bg-white border-black rounded-full px-5 py-2">
             Register
           </button>
           <button
-            class="bg-blue-600 items-center rounded-full px-5 py-2 flex flex-row gap-4 text-white"
-          >
+            class="bg-blue-400 flex gap-3 rounded-full justify-center items-center px-5">
             <img
               src="../img/user.png"
               alt="user-profile"
-              class="h-5 object-fill object-center"
-            />
+              class="h-5 object-contain object-center" />
             <a href="#login">Login</a>
           </button>
         </div>
       </div>
-
-      <div class="md:hidden flex flex-col h-[60vh]">
+      <div id="mobile" class="md:hidden w-full">
         <div
-          class="bg-gray-200 rounded-full h-24 flex md:flex-row-reverse justify-between items-center gap-5 px-9"
-        >
-          <div class="flex sm:flex-row-reverse">
-              <img
-                src="../img/logo.png"
-                alt="logo"
-                class="h-12 object-fill object-center"
-              />
-          </div>
-          <div id="hamburger" ">
+          id="brand"
+          class="flex flex-row justify-between items-center w-full">
+          <img
+            src="../img/logo.png"
+            alt="logo"
+            class="h-10 object-fill object-center" />
+          <button id="hamburger" class="justify-end">
             <img
               src="../img/logo1.png"
               alt="menu"
-              class=" h-12"
-              class="hamburger"
-            />
-          </div>
+              class="h-12"
+              class="hamburger" />
+            <img
+              class="hidden menu-toggler"
+              src="../img/close.png"
+              alt="menu"
+              class="h-12" />
+          </button>
         </div>
         <div
-          class="slidebar bg-black flex flex-row-reverse  font-san items-center justify-between text-white text-xl w-[60vw] mx-5 py-10 px-2"
-        >
-          <!-- <div class="space-x-10">Service</div> -->
-          <!-- <div>Partners</div>
-          <div>Team</div>
-          <div>Blog</div> -->
+          class="slidebar hidden bg-black flex-col-reverse font-san items-center justify-around gap-4 text-white text-xl w-[60vw] py-10 px-2 absolute z-10 top-full">
           <button
-            class="md:hidden bg-white text-black border border-black rounded-full px-3 py-2 w-fit"
-          >
+            class="bg-white border-black rounded-full px-5 py-2 w-full text-black">
             Register
           </button>
           <button
-            class=" bg-blue-500  rounded-full px-3 py-2 flex flex-row gap-2 w-fit text-white relative z-10"
-          >
+            class="bg-blue-400 flex gap-5 rounded-full justify-center items-center px-5 py-2 w-full">
             <img
               src="../img/user.png"
               alt="user-profile"
-              class="h-7 object-fill object-center"
-            />
+              class="h-5 object-contain object-center" />
             <a href="#login">Login</a>
           </button>
         </div>
       </div>
+    </header>
 
-      <div class="menu">
-        <div class="content-left">
-          <div>content-top</div>
-          <div>content-bottom</div>
+    <section class="flex flex-col my-10 px-5">
+      <div
+        class="flex flex-col justify-around items-start sm:flex-row sm:justify-between sm:items-center">
+        <div class="flex flex-col justify-center items-start sm:gap-10 w-full">
+          <h1
+            class="sm:flex flex-col font-serif text-4xl/10 py-4 subpixel-antialiased font-medium sm:line-clamp-3">
+            <span>Maximum profit</span>
+            <span>from advertising</span>
+            <span>on market places</span>
+          </h1>
+          <p
+            class="sm:flex flex-col py-4 font-sans text-sm font-light tracking-tighter">
+            <span>We help rise product to the top </span>
+            <span>using smart management and analystics</span>
+          </p>
         </div>
+        <div class="flex flex-col justify-around items-center w-full relative">
+          <img
+            src="../img/image1.jpg"
+            alt="background image"
+            class="w-full h-64 rounded-3xl object-cover object-fit" />
+          <div
+            class="mx-5 flex justify-center items-center absolute text-white top-1 -right-1">
+            <div class="text-4xl px-2">
+              <p>100K+</p>
+            </div>
+            <div
+              class="flex flex-col justify-center font-medium text-xs tracking-tighter leading-none">
+              <span>User</span>
+              <span>Joined</span>
+            </div>
+          </div>
 
-        <div class="content-right">
-          <div class="content-right-top"></div>
-          <div class="content-right-bottom">
-            <div></div>
-            <div></div>
-            <div></div>
+          <button
+            class="px-5 py-2 mx-5 bg-white rounded-full flex gap-2 font-sm text-sm absolute z-10 top-3/4 -right-1 bg-opacity-25">
+            <span>About company</span>
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col-reverse sm:flex-row justify-between sm:items-center py-5">
+        <div class="flex items-center my-5 text-white">
+          <button
+            class="rounded-full py-2 px-4 border text-gray-600 text-xs font-medium">
+            Learn more
+          </button>
+
+          <button
+            class="py-2 px-4 rounded-sm text-xs font-medium flex items-center gap-x-1.5">
+            <div class="relative bg-blue-500 py-2 px-4 rounded-full">
+              Start for free
+              <div class="w-6 h-3 bg-blue-500 absolute top-1/3 -right-3"></div>
+            </div>
+            <span
+              class="bg-blue-500 p-2 flex items-center justify-center rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div
+          class="flex justify-between gap-5 sm:w-1/2 bg-gray-100 rounded-lg p-5">
+          <div>
+            <h2 class="font-sans text-2xl sm:text-2xl">85%</h2>
+            <p class="font-sans text-sm antialiased font-light tracking-tight">
+              earn in <br />
+              first month
+            </p>
+          </div>
+          <div>
+            <h2 class="font-sans text-2xl sm:text-2xl">120K</h2>
+            <p class="font-sans text-sm antialiased font-light tracking-tight">
+              average profit <br />
+              per month
+            </p>
+          </div>
+          <div>
+            <h2 class="font-sans text-2xl sm:text-2xl">5%</h2>
+            <p class="font-sans text-sm antialiased font-light tracking-tight">
+              sales declined <br />
+              after 6 months
+            </p>
           </div>
         </div>
       </div>
     </section>
   </body>
+
   <!-- <script src="http://127.0.0.1:5500/script/index.js"></script> -->
   <script>
     const hamburger = document.getElementById("hamburger");
@@ -115,9 +206,11 @@
 
     function showSlidebar() {
       const slidebar = document.querySelector(".slidebar");
+      const menuButton = document.querySelector(".menu-toggler");
       const disp = slidebar.style.display;
       if (disp === "none") {
         slidebar.style.display = "flex";
+        menuButton.src = "../img/close.png";
       } else {
         slidebar.style.display = "none";
       }
